@@ -21,7 +21,16 @@ class Calculator {
     }
 
     divide () {
-        return this.num1/this.num2;
+        if (this.num1 > this.num2) {
+            return this.num1 / this.num2; 
+        } else if (this.num1 < this.num2){
+            return this.num2 / this.num1;
+        } else {
+            console.log('undefined')
+        }
     }
 }
 
+const calc = new Calculator(2,3);
+
+module.exports = Calculator
